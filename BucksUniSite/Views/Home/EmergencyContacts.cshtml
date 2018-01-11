@@ -1,0 +1,14 @@
+﻿@{
+	ViewBag.Title = "EmergencyContacts";
+}
+
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+
+//@*Change your actionname and controller here*@
+@using (Html.BeginForm("EmergencyContacts", "Home", FormMethod.Post))
+{
+			<input type="submit" value="Emergency Call" class="btn btn-success" name="Calling" />
+}//
+
