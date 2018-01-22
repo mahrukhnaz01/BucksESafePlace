@@ -4,6 +4,9 @@
     [IncidentTitle] NVARCHAR(50) NULL, 
     [IncidentLocation] NVARCHAR(50) NULL, 
     [IncidentDate] DATE NULL, 
-    [IncidentDescription] TEXT NULL
-	PRIMARY KEY CLUSTERED ([IncidentID] ASC)
+    [IncidentDescription] TEXT NULL,
+	[CentreID] INT NOT NULL, 
+	PRIMARY KEY CLUSTERED ([IncidentID] ASC),
+    CONSTRAINT [FK_dbo.Centre_dbo.Centre_CentreID] FOREIGN KEY ([CentreID]) 
+        REFERENCES [dbo].[Centre] ([CentreID]) ON DELETE CASCADE
 )

@@ -23,12 +23,12 @@ VALUES (ShopName, ShopAddress, Postcode, TelNumber);
 
 MERGE INTO Incident AS Target
 USING (VALUES
-		(1, 'Lost', 'High Wycombe', '2016-05-15', 'No way home'),
-		(2, 'Injured', 'High Wycombe', '2013-02-22', 'Broken leg'),
-		(3, 'Feeling sick', 'High Wycombe', '2017-11-02', 'Not able to walk home')
+		(1, 'Lost', 'High Wycombe', '2016-05-15', 'No way home', 1),
+		(2, 'Injured', 'High Wycombe', '2013-02-22', 'Broken leg', 1),
+		(3, 'Feeling sick', 'High Wycombe', '2017-11-02', 'Not able to walk home', 1)
 )
-AS SOURCE (IncidentID, IncidentTitle, IncidentLocation, IncidentDate, IncidentDescription)
+AS SOURCE (IncidentID, IncidentTitle, IncidentLocation, IncidentDate, IncidentDescription, CentreID)
 ON TARGET.IncidentID = Source.IncidentID
 WHEN NOT MATCHED BY TARGET THEN
-INSERT (IncidentTitle, IncidentLocation, IncidentDate, IncidentDescription)
-VALUES (IncidentTitle, IncidentLocation, IncidentDate, IncidentDescription);
+INSERT (IncidentTitle, IncidentLocation, IncidentDate, IncidentDescription, CentreID)
+VALUES (IncidentTitle, IncidentLocation, IncidentDate, IncidentDescription, CentreID);

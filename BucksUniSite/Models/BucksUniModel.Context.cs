@@ -25,8 +25,7 @@ namespace BucksUniSite.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Course> Courses { get; set; }
-        public virtual DbSet<Enrollment> Enrollments { get; set; }
-        public virtual DbSet<Student> Students { get; set; }
+        public virtual DbSet<Centre> Centres { get; set; }
+        public virtual DbSet<Incident> Incidents { get; set; }
     }
 }

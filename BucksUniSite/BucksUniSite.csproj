@@ -221,17 +221,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BucksUniModel.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Models\Course.cs">
-      <DependentUpon>BucksUniModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Enrollment.cs">
+    <Compile Include="Models\Centre.cs">
       <DependentUpon>BucksUniModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\Student.cs">
+    <Compile Include="Models\Incident.cs">
       <DependentUpon>BucksUniModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>

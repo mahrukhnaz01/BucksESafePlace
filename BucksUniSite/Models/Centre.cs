@@ -12,21 +12,21 @@ namespace BucksUniSite.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Student
+    public partial class Centre
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Student()
+        public Centre()
         {
-            this.Enrollments = new HashSet<Enrollment>();
+            this.Incidents = new HashSet<Incident>();
         }
     
-        public int StudentID { get; set; }
-        public string LastName { get; set; }
-        public string FirstName { get; set; }
-        public Nullable<System.DateTime> EnrollmentDate { get; set; }
-        public string MiddleName { get; set; }
+        public int CentreID { get; set; }
+        public string ShopName { get; set; }
+        public string ShopAddress { get; set; }
+        public string Postcode { get; set; }
+        public string TelNumber { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Enrollment> Enrollments { get; set; }
+        public virtual ICollection<Incident> Incidents { get; set; }
     }
 }

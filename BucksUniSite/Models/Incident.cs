@@ -12,14 +12,15 @@ namespace BucksUniSite.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Enrollment
+    public partial class Incident
     {
-        public int EnrollmentID { get; set; }
-        public Nullable<decimal> Grade { get; set; }
-        public int CourseID { get; set; }
-        public int StudentID { get; set; }
+        public int IncidentID { get; set; }
+        public string IncidentTitle { get; set; }
+        public string IncidentLocation { get; set; }
+        public Nullable<System.DateTime> IncidentDate { get; set; }
+        public string IncidentDescription { get; set; }
+        public int CentreID { get; set; }
     
-        public virtual Course Course { get; set; }
-        public virtual Student Student { get; set; }
+        public virtual Centre Centre { get; set; }
     }
 }
